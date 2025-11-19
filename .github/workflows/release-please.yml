@@ -1,0 +1,40 @@
+name: Release & Publish
+on:
+    push:
+        branches:
+            - main
+
+permissions:
+    contents: write
+    issues: write
+    pull-requests: write
+
+jobs:
+    release:
+        if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+            - uses: googleapis/release-please-action@v4
+              id: r
+              with:
+                  token: ${{ secrets.RELEASE_PLEASE_GITHUB_TOKEN }}
+                  release-type: node
+
+            - name: Setup Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 20
+                  registry-url: https://registry.npmjs.org/
+              if: ${{ steps.r.outputs.release_created }}
+
+            - name: Install & Build
+              run: npm ci && npm run build
+              if: ${{ steps.r.outputs.release_created }}
+
+            - name: Publish to npm
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+              run: npm publish --access public
+              if: ${{ steps.r.outputs.release_created }}
