@@ -13,7 +13,6 @@
 		"android": "expo start --android",
 		"ios": "expo start --ios",
 		"web": "expo start --web",
-		"storybook-generate": "sb-rn-get-stories",
 		"build": "tsc",
 		"build:watch": "tsc -w",
 		"lint": "eslint . --ext .ts,.tsx",
@@ -28,13 +27,6 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.28.5",
-		"@gorhom/bottom-sheet": "^5.2.6",
-		"@react-native-async-storage/async-storage": "^2.2.0",
-		"@react-native-community/datetimepicker": "^8.5.0",
-		"@react-native-community/slider": "^5.1.1",
-		"@storybook/addon-ondevice-actions": "^10.0.7",
-		"@storybook/addon-ondevice-controls": "^10.0.7",
-		"@storybook/react-native": "^10.0.7",
 		"@types/jest": "^30.0.0",
 		"@types/react": "~19.1.0",
 		"babel-loader": "^8.4.1",
@@ -43,7 +35,6 @@
 		"react-native-reanimated": "^4.1.5",
 		"react-native-safe-area-context": "^5.6.2",
 		"react-native-svg": "^15.15.0",
-		"storybook": "^10.0.8",
 		"typescript": "~5.9.2"
 	},
 	"peerDependencies": {
