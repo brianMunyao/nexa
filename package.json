@@ -1,90 +1,90 @@
 {
-  "name": "rn-nexa",
-  "version": "1.0.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "type": "module",
-  "files": [
-    "dist",
-    "README.md"
-  ],
-  "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "build": "tsc",
-    "build:watch": "tsc -w",
-    "lint": "eslint . --ext .ts,.tsx",
-    "test": "jest",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  },
-  "dependencies": {
-    "@expo/vector-icons": "^15.0.3",
-    "expo": "~54.0.25",
-    "expo-status-bar": "~3.0.8",
-    "react": ">=18.0.0",
-    "react-native": ">=0.72.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.28.5",
-    "@storybook/addon-docs": "^10.0.8",
-    "@storybook/addon-onboarding": "^10.0.8",
-    "@storybook/react-vite": "^10.0.8",
-    "@types/jest": "^30.0.0",
-    "@types/react": "~19.1.0",
-    "babel-loader": "^8.4.1",
-    "react-dom": "^19.1.0",
-    "react-native-gesture-handler": "^2.29.1",
-    "react-native-reanimated": "^4.1.5",
-    "react-native-safe-area-context": "^5.6.2",
-    "react-native-svg": "^15.15.0",
-    "storybook": "^10.0.8",
-    "typescript": "~5.9.2"
-  },
-  "peerDependencies": {
-    "react": ">=18.0.0",
-    "react-native": ">=0.72.0"
-  },
-  "sideEffects": false,
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./components": {
-      "import": "./dist/components/index.js",
-      "require": "./dist/components/index.js",
-      "types": "./dist/components/index.d.ts"
-    },
-    "./hooks": {
-      "import": "./dist/hooks/index.js",
-      "require": "./dist/hooks/index.js",
-      "types": "./dist/hooks/index.d.ts"
-    },
-    "./theme": {
-      "import": "./dist/theme/index.js",
-      "require": "./dist/theme/index.js",
-      "types": "./dist/theme/index.d.ts"
-    },
-    "./types": {
-      "import": "./dist/types/index.js",
-      "require": "./dist/types/index.js",
-      "types": "./dist/types/index.d.ts"
-    },
-    "./utils": {
-      "import": "./dist/utils/index.js",
-      "require": "./dist/utils/index.js",
-      "types": "./dist/utils/index.d.ts"
-    }
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/brianMunyao/nexa.git"
-  }
+	"name": "rn-nexa",
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"type": "module",
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"scripts": {
+		"start": "expo start",
+		"android": "expo start --android",
+		"ios": "expo start --ios",
+		"web": "expo start --web",
+		"build": "tsc",
+		"build:watch": "tsc -w",
+		"lint": "eslint . --ext .ts,.tsx",
+		"test": "jest",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build --config-dir .storybook"
+	},
+	"dependencies": {
+		"@expo/vector-icons": "^15.0.3",
+		"expo": "~54.0.25",
+		"expo-status-bar": "~3.0.8",
+		"react": ">=18.0.0",
+		"react-native": ">=0.72.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.28.5",
+		"@storybook/addon-docs": "^10.0.8",
+		"@storybook/addon-onboarding": "^10.0.8",
+		"@storybook/react-vite": "^10.0.8",
+		"@types/jest": "^30.0.0",
+		"@types/react": "~19.1.0",
+		"babel-loader": "^8.4.1",
+		"react-dom": "^19.1.0",
+		"react-native-gesture-handler": "^2.29.1",
+		"react-native-reanimated": "^4.1.5",
+		"react-native-safe-area-context": "^5.6.2",
+		"react-native-svg": "^15.15.0",
+		"storybook": "^10.0.8",
+		"typescript": "~5.9.2"
+	},
+	"peerDependencies": {
+		"react": ">=18.0.0",
+		"react-native": ">=0.72.0"
+	},
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"require": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		},
+		"./components": {
+			"import": "./dist/components/index.js",
+			"require": "./dist/components/index.js",
+			"types": "./dist/components/index.d.ts"
+		},
+		"./hooks": {
+			"import": "./dist/hooks/index.js",
+			"require": "./dist/hooks/index.js",
+			"types": "./dist/hooks/index.d.ts"
+		},
+		"./theme": {
+			"import": "./dist/theme/index.js",
+			"require": "./dist/theme/index.js",
+			"types": "./dist/theme/index.d.ts"
+		},
+		"./types": {
+			"import": "./dist/types/index.js",
+			"require": "./dist/types/index.js",
+			"types": "./dist/types/index.d.ts"
+		},
+		"./utils": {
+			"import": "./dist/utils/index.js",
+			"require": "./dist/utils/index.js",
+			"types": "./dist/utils/index.d.ts"
+		}
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/brianMunyao/nexa.git"
+	}
 }
